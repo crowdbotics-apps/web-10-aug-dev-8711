@@ -9,6 +9,13 @@ from django.db import models
 class CustomText(models.Model):
     nfghgfhgf = models.BigIntegerField(null=True, blank=True,)
     hvghgjgjhgfhjg = models.TextField(null=True, blank=True,)
+    demoUser = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_demoUser",
+    )
 
     def __str__(self):
         return self.title
@@ -24,6 +31,13 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     jhgfhjgjhgjhg = models.BigIntegerField(null=True, blank=True,)
+    demoUser = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_demoUser",
+    )
 
     @property
     def api(self):

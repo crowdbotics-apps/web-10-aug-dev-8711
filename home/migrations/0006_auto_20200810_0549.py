@@ -6,39 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0005_auto_20200810_0544'),
+        ("home", "0005_auto_20200810_0544"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='customtext',
-            name='test',
-        ),
-        migrations.RemoveField(
-            model_name='customtext',
-            name='titleChanged',
-        ),
-        migrations.RemoveField(
-            model_name='homepage',
-            name='body123',
-        ),
-        migrations.RemoveField(
-            model_name='homepage',
-            name='demo',
-        ),
+        migrations.RemoveField(model_name="customtext", name="test",),
+        migrations.RemoveField(model_name="customtext", name="titleChanged",),
+        migrations.RemoveField(model_name="homepage", name="body123",),
+        migrations.RemoveField(model_name="homepage", name="demo",),
         migrations.AddField(
-            model_name='customtext',
-            name='hvghgjgjhgfhjg',
+            model_name="customtext",
+            name="hvghgjgjhgfhjg",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='nfghgfhgf',
+            model_name="customtext",
+            name="nfghgfhgf",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='jhgfhjgjhgjhg',
+            model_name="homepage",
+            name="jhgfhjgjhgjhg",
             field=models.BigIntegerField(blank=True, null=True),
         ),
     ]
