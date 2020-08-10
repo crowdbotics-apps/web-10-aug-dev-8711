@@ -7,7 +7,14 @@ from django.db import models
 
 
 class CustomText(models.Model):
-    titleChanged = models.CharField(max_length=150, blank=True,)
+    titleChanged = models.CharField(blank=True, max_length=150,)
+    test = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_test",
+    )
 
     def __str__(self):
         return self.title
@@ -23,6 +30,13 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body123 = models.TextField(blank=True,)
+    demo = models.ForeignKey(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="homepage_demo",
+    )
 
     @property
     def api(self):
